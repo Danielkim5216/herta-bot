@@ -1,0 +1,34 @@
+{
+  "name": "herta",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js",
+    "dev": "nodemon --exec tsx src/index.ts",
+    "build": "tsc",
+    "deploy": "tsx src/deploy-commands.ts"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "cheerio": "^1.1.2",
+    "discord.js": "^14.23.2",
+    "dotenv": "^17.2.3",
+    "enka-network-api": "^5.0.12",
+    "enkanetwork.js": "^2.10.10",
+    "htop": "^1.0.1",
+    "mongoose": "^8.19.2",
+    "starrail.js": "^1.9.6",
+    "tsx": "^4.20.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
