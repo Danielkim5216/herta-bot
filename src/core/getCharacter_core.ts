@@ -7,26 +7,23 @@ export default async function getCharacter_core(interaction: ChatInputCommandInt
     //debug
     try {
         const characters = client.getAllCharacters();
+        //!. 한번에 메시지에 모든 캐릭터 이름/속성을 모두 넣어줘야함
+        //{NIKNAME} 이건 출시 예정 캐릭터들인가
+
+        const embed = new EmbedBuilder()
+            .setTitle('캐릭터 목록')
+            .setColor('White')
+        // 모든 캐릭터 정보를 문자열로 조합
+        let description = '';
         for (const character of characters) {
             const name = character.name.get();
             const combatType = character.combatType.name.get();
+            // 각 캐릭터 정보를 한 줄로 추가
+            description += `**${name}** — ${combatType}\n`;
         }
-
-        // const embed = new EmbedBuilder()
-        //     .setTitle("캐릭터")
-        //     .setColor('White')
-        //     .addFields(
-        //         { name: '이름-원소', value: `"${name}" - ${combatType}` }
-        //     )
-        // interaction.reply({ embeds: [embed] });
-
-        // for (const character of characters) {
-        //     const name = character.name.get();
-        //     const combatType = character.combatType.name.get();
-        //     console.log(`"${name}" - ${combatType}`);
-
-        //     interaction.reply(`"${name}" - ${combatType}`);
-        // }
+        embed.setDescription(description);
+        // 한 번만 전송
+        await interaction.reply({ embeds: [embed] });
     } catch (error) {
         interaction.reply(`${error}`);
     }
