@@ -12,7 +12,7 @@ herta-bot is discord bot that search user information or character information e
 ## 명령어
 - `/uidsearch` : uid로 유저 정보 출력
 - `/getcharacter` : 스타레일 캐릭터 정보 출력
-- `/getlightconeInfo` : 광추 정보 출력
+- `/getlightconeInfo` : 광추 정보 출력 (특정 광추의 중첩/레벨을 선택해서 HP,공격력,방어력 확인 가능)
 
 ## 공지
 `uidsearch` 명령어로 유저 정보를 출력할 수 있습니다. 
@@ -21,13 +21,12 @@ herta-bot is discord bot that search user information or character information e
 
 `getcharacter` 명령어로 모든 스타레일 캐릭터 이름-원소 정보를 출력할 수 있습니다.
 
-`/getlightconeInfo` 명령어로 광추 이름을 넣어 광추 이미지와 운명의 길, 광추 등급 정보를 확인할 수 있습니다.
+`/getlightconeInfo` 명령어로 광추 이름을 넣어 광추 이미지와 운명의 길, 광추 등급 ,중첩/레벨을 선택해서 HP,공격력,방어력 확인할 수 있습니다.
 
 `/hertainfo` 명령어로 봇 개발자 / 깃헙리포 정보를 확인할 수 있습니다.
 
 ## 앞으로 추가될 명령어/기능 (계속 업데이트중)
 > [!NOTE]
-> - 특정 광추의 돌파/레벨을 선택해서 기초HP,공격력,방어력 확인 가능
 > - `/myuiduidRegister`로 uid를 등록해두면 `/myStarrail` 명령어를 입력했을때 Discord User Id로 비교하여 `uidsearch` 명령어 없이도 자신의 정보를 바로 확인 가능
 
 ## .env 
