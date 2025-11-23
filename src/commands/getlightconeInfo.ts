@@ -8,6 +8,13 @@ export const data = new SlashCommandBuilder()
     .addStringOption((Option) => Option.setName("lightconename")
         .setDescription("광추 이름을 적어주세요: ")
         .setRequired(true))
+    .addIntegerOption((Option) => Option.setName("starts")
+        .setDescription("중첩 (입력 없을시 0중첩)")
+        .setRequired(false))
+    .addIntegerOption((Option) => Option.setName("level")
+        .setDescription("레벨 (입력 없을시 1레벨)")
+        .setRequired(false))
+
 
 
 export async function execute(interaction: ChatInputCommandInteraction) {
